@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib"))
     testImplementation("junit:junit:4.13.2")
 }
 application{
@@ -20,7 +20,7 @@ application{
 tasks.test {
     useJUnit()
     testLogging{
-        events("passed", "skipped", "failed")
+        events("passed", "failed", "skipped")
         exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
         showStandardStreams = true
     }
